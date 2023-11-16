@@ -1,0 +1,18 @@
+def solution(N):
+    binary = bin(N)[2:]
+    max_gap_length = 0
+    current_gap_length =0
+    for num in binary:
+        if num == "0":
+            current_gap_length +=1
+        else:
+            max_gap_length = max(current_gap_length, max_gap_length)
+            current_gap_length = 0
+
+    return max_gap_length
+
+# print(solution(1041))
+
+print(f"{6:08b}")
+z = bin(2796202)
+print(z)
