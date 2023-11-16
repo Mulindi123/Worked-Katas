@@ -30,18 +30,18 @@ def solution(N):
             selected_letters.add(letter)
             result.extend([letter] * repeat_factor)
 
-    print("Selected Letters:",selected_letters)
-    print("".join(result))
+    # print("Selected Letters:",selected_letters)
+    # print("".join(result))
     return "".join(result[:N])
 
-# print(solution(3))
-# print(solution(4))
-# print(solution(5))
-# print(solution(30))
+print(solution(3))
+print(solution(4))
+print(solution(5))
+print(solution(30))
 
-A = list(solution(40))
+# A = list(solution(40))
 
-count_a = Counter(A)
-print(len(A))
+# count_a = Counter(A)
+# print(len(A))
 
-print(count_a)
+# print(count_a)
