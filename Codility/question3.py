@@ -17,3 +17,28 @@
 # 1. Given R = "BAABA" and V = [2,4,1,1,2], the function should return [2,4].
 # 2. Given R = "ABAB" and V = [10,5,10,15], the function should return [0,15].
 # 3. Given R = "B" and V = [100], the function should return [100,0].
+
+# A is a list of objects. Each object is {bank: R[K], amount: V[K]}
+
+
+def solution(R, V):
+    N = len(R)
+    balance_A = 0
+    balance_B = 0
+    min_balance_A = 0
+    min_balance_B = 0
+
+    for i in range(N):
+        if R[i] == 'A':
+            balance_A += V[i]
+            min_balance_A = min(min_balance_A, balance_A)
+        else:
+            balance_B += V[i]
+            min_balance_B = min(min_balance_B, balance_B)
+
+    return [max(0, min_balance_A), max(0, min_balance_B)]
+
+
+print(solution("BAABA", [2, 4, 1, 1, 2]))  # Output: [2, 4]
+print(solution("ABAB", [10, 5, 10, 15]))    # Output: [0, 15]
+print(solution("B", [100]))                  # Output: [100, 0]
