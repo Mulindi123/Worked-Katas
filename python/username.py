@@ -31,3 +31,15 @@ list1 = [
 # def username(lst):
 #     for dev in lst:
 #         dev['username'] = f"{firstName}"
+
+num = [2,3,4,5]
+print(sum(num,100))
+
+
+a, *b = 10, 20, 30
+print(b)
+print(type(b))
+
+
+
+
